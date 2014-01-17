@@ -8,6 +8,14 @@ a{   blr:expression(this.onFocus=this.blur());/*IE*/
 	text-decoration:none; }
 img{ border:0px;}
 .clear{ clear:both}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.clearfix {
+	clear:both;
+}
 /*页头页尾**********************************/
 .indexTop{ width:1147px; height:138px; margin:0px auto;color:#8a8a8a; }
 .indexTopTel{ width:1147px; height:28px; line-height:28px; font-size:12px;}
@@ -652,6 +660,3 @@ color:#ffffff;
 .helpNavs li a{display:block; height:12px; font-family:"微软雅黑"; font-size:14px; color:#afafaf;}
 .helpNavs li a:hover{ color:#0b5185; font-weight:bold;}
 .helpNavs li a.hover{ color:#0b5185; font-weight:bold;}
-
-
-
