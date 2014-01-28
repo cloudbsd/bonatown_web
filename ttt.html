@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<title>第26款插件：基于Jquery的无缝水平滚动图片插件之「jcarousellite」</title>
+		<script type="text/javascript" src="http://ijquery.360sites.cn/js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="http://ijquery.360sites.cn/js/jcarousellite.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#demo-01').jCarouselLite({
+					btnPrev: '#prev-01',
+					btnNext: '#next-01',
+					visible:2
+				});		
+			});
+		</script>
+		<style type="text/css">
+					</style>
+	</head>
+	<body>
+		<div id="header">
+			<h1>第26款插件：基于Jquery的无缝水平滚动图片插件之「jcarousellite」</h1>
+		</div>
+		
+		<div class="container">
+			<div id="container">
+				
+				<!--start-->
+				<div class="carousel">
+					<a href="javascript:void(0);" class="prev" id="prev-01">&nbsp </a>
+					<div class="jCarouselLite" id="demo-01">
+						<ul>
+							<li><a href="#" target="_blank"><img  alt="" src="images/index-index11.jpg" /></a></li>
+							<li><a href="#" target="_blank"><img alt="" src="images/index-index12.jpg" /></a></li>
+						</ul>
+					</div>
+					<a href="javascript:void(0);" class="next" id="next-01">&nbsp </a>
+					<div class="clear"></div>   
+				</div>
+				<!--end-->
+				
+			</div>
+		</div>
+		
+		<div id="footer"></div>
+		
+	</body>
+</html>	

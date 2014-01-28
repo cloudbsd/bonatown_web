@@ -6,6 +6,7 @@
 <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <SCRIPT type="text/javascript" src="js/jquery-1.8.3.min.js"></SCRIPT>
 <SCRIPT type="text/javascript" src="js/site.js"></SCRIPT>
+<SCRIPT type="text/javascript" src="js/jquery.customSelect.js"></SCRIPT>
 <title></title>
 </head>
 <body>
@@ -102,26 +103,26 @@
 <div class="navlistBot">
 </div>
 </div>
+
 <div class="indexbanner"><img src="images/index-index10.jpg" /></div>
 <div class="clear"></div>
 
 <div class="indexDiscountbox">
-<div class="indexDiscountboxLet"></div>
 <div class="indexDiscountboxMid">
 <div class="indexDiscountTitel">
 <ul>
-<li><a href="#">会员优惠</a></li>
-<li><a href="#" class="hover">新品推荐</a></li>
+<li><a href="#" id="bnt-discount">会员优惠</a></li>
+<li><a href="#" id="bnt-recommend" class="hover">新品推荐</a></li>
 </ul>
 </div>
 
+<div id="discount" class="discount-recommend">
+<div class="mod1">
 <div class="indexDiscountLet">
-
-<div class="indexDiscountLetTitel"><a href="#">某某保险</a></div>
+<div class="indexDiscountLetTitel"><a href="#">某某保险一</a></div>
 <div class="indexDiscountLetnr">
 <a href="#"><img src="images/index-index19.jpg" class="indexDiscountLetimg1" /></a>
-<h1><a href="#">产品特色</a></h1>
-
+<h1><a href="#">产品特色一</a></h1>
 <span> <a href="#"> 1、综合交通保障，特色特色。<br/>
 2、意外伤残，医疗。</a></span><br/>
 <h2><a href="#">￥<strong>100.00</strong>起</a></h2>
@@ -129,19 +130,16 @@
 <input name="" type="button" class="indexDiscountLetnrh4" value="我要投保"   />
 <div class="clear"></div>
 <div class="indexInsure">30天内<span>0</span>人投保</div >
-
-
+</div>
+</div>
 </div>
 
-</div>
-
+<div class="mod1">
 <div class="indexDiscountRit">
-
-<div class="indexDiscountRitTitel"><a href="#">某某保险</a></div>
+<div class="indexDiscountRitTitel"><a href="#">某某保险一</a></div>
 <div class="indexDiscountRitnr">
 <a href="#"> <img  src="images/index-index21.jpg" class="indexDiscountRitimg1" /></a>
 <h1><a href="#">产品特色</a></h1>
-
 <span><a href="#"> 1、综合交通保障，特色特色。<br/>
 2、意外伤残，医疗。</a></span><br/>
 <h2><a href="#">￥<strong>100.00</strong>起</a></h2>
@@ -149,26 +147,57 @@
 <input name="" type="button" class="indexDiscountLetnrh4" value="我要投保"   />
 <div class="clear"></div>
 <div class="indexInsure">30天内<span>0</span>人投保</div >
+</div>
+</div>
+</div>
+</div>
+
+<div id="recommend" class="discount-recommend">
+<div class="mod1">
+<div class="indexDiscountLet">
+<div class="indexDiscountLetTitel"><a href="#">某某保险</a></div>
+<div class="indexDiscountLetnr">
+<a href="#"><img src="images/index-index19.jpg" class="indexDiscountLetimg1" /></a>
+<h1><a href="#">产品特色</a></h1>
+<span> <a href="#"> 1、综合交通保障，特色特色。<br/>
+2、意外伤残，医疗。</a></span><br/>
+<h2><a href="#">￥<strong>100.00</strong>起</a></h2>
+<input name="" type="button" class="indexDiscountLetnrh3" value="我要投保"   />
+<input name="" type="button" class="indexDiscountLetnrh4" value="我要投保"   />
+<div class="clear"></div>
+<div class="indexInsure">30天内<span>0</span>人投保</div >
+</div>
+</div>
+</div>
+
+
+<div class="mod1">
+<div class="indexDiscountRit">
+<div class="indexDiscountRitTitel"><a href="#">某某保险</a></div>
+<div class="indexDiscountRitnr">
+<a href="#"> <img  src="images/index-index21.jpg" class="indexDiscountRitimg1" /></a>
+<h1><a href="#">产品特色</a></h1>
+<span><a href="#"> 1、综合交通保障，特色特色。<br/>
+2、意外伤残，医疗。</a></span><br/>
+<h2><a href="#">￥<strong>100.00</strong>起</a></h2>
+<input name="" type="button"  value="我要投保" class="indexDiscountRitnrh3"  />
+<input name="" type="button" class="indexDiscountLetnrh4" value="我要投保"   />
+<div class="clear"></div>
+<div class="indexInsure">30天内<span>0</span>人投保</div >
+</div>
+</div>
+</div>
+</div>
 
 
 </div>
-
-</div>
-
-
-
-</div>
-<div class="indexDiscountboxRit"></div>
 
 </div>
 <div class="clear"></div>
 <div class="indexCartybox">
 
-<div class="indexCartyTitelLet"></div>
 <div class="indexCartyTitel"><img src="images/index-index23.jpg" /><a href="#">货运险 & 车险</a> </div>
-<div  class="indexCartyTitelRit"></div>
 
-<div class="indexCartyBoxLet"></div>
 
 <div class="indexCarty">
 <div class="indexCarty1">
@@ -235,22 +264,14 @@
 
 </div>
 
-<div class="indexCartyBoxRit">
-
-</div>
 
 </div>
 
 
 <div class="indexPropertybox">
-
-<div class="indexPropertyTitelLet"></div>
 <div class="indexPropertyTitel"><img src="images/index-index30.jpg" /><a href="#">财产险</a></div>
-<div  class="indexPropertyTitelRit"></div>
 
-<div class="indexPropertyBoxLet"></div>
 <div class="indexProperty">
-
 <div class="indexProperty1">
 <a href="#"><img  src="images/index-index21.jpg" class="indexProperty1img1" /></a>
 <h1><a href="#">商业型</a></h1>
@@ -280,26 +301,19 @@
 <li><a href="#">商业楼宇财产险条款？</a></li>
 <li><a href="#">工程保险条款？</a></li>
 
-                                                                       </ul>	                                                                                
+</ul>	                                                                                
 </div>
 
 
 
 </div>
 
-<div class="indexPropertyBoxRit">
-
-</div>
 
 </div>  
 
 <div class="indexdutybox">
 
-<div class="indexdutyTitelLet"></div>
 <div class="indexdutyTitel"><img src="images/index-index28.jpg" /><a href="#">产责任</a> </div>
-<div  class="indexdutyTitelRit"></div>
-
-<div class="indexdutyBoxLet"></div>
 
 <div class="indexduty">
 <div class="indexduty1">
@@ -373,20 +387,14 @@
 
 </div>
 
-<div class="indexdutyBoxRit">
-
-</div>
 
 </div> 
 <div class="clear"></div>    
 
 <div class="indexMedicinetybox">
 
-<div class="indexMedicinetyTitelLet"></div>
 <div class="indexMedicinetyTitel"><img src="images/index-index37.jpg" /><a href="#">医疗健康&养老年金</a> </div>
-<div  class="indexMedicinetyTitelRit"></div>
 
-<div class="indexMedicinetyBoxLet"></div>
 
 <div class="indexMedicinety">
 <div class="indexMedicinety1">
@@ -441,16 +449,12 @@
 <li><a href="#">[险种名称]广告语广告语<br/>
 ￥<span>20.00</span>起</a>
 </li>
-
-                                      </ul>                                                                   
+</ul>                                                                   
                   
 </div>
 
 </div>
 
-<div class="indexMedicinetyBoxRit">
-
-</div>
 
 </div>
 

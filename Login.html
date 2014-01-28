@@ -6,6 +6,7 @@
 <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <SCRIPT type="text/javascript" src="js/jquery-1.8.3.min.js"></SCRIPT>
 <SCRIPT type="text/javascript" src="js/site.js"></SCRIPT>
+<SCRIPT type="text/javascript" src="js/jquery.customSelect.js"></SCRIPT>
 <title></title>
 </head>
 
@@ -69,34 +70,33 @@
 <div class="loginLeft">
 <div class="loginLeftBox">
 <div class="loginLeftTitel">登录</div>
-<table width="296" border="0" >
-<tr>
-<td width="77" height="45" align="right" class="malMembepasswordtitel">用户名：</td>
-<td colspan="3"><input name="input3" type="text"  class="loginLeftinput1" /></td>
-</tr>
-<tr>
-<td width="77" height="45" align="right" class="malMembepasswordtitel">登录密码：</td>
-<td colspan="3"><input name="input2" type="text"  class="loginLeftinput1" /></td>
-</tr>
-<tr>
-<td width="77" height="45" align="right" class="malMembepasswordtitel">验证码：</td>
-<td width="90"><input name="input" type="text"  class="loginLeftinput2" /></td>
-<td width="70"><input name="" type="button"  class="loginLeftinput5" value="ABCD" /></td>
-<td width="41"><a href="#" class="loginLeftinput6">换一张</a></td>
-</tr>
-<tr>
-<td width="77" height="18" align="right" class="malMembepasswordtitel">&nbsp;</td>
-<td colspan="3" class="malMembepasswordcode"><a href="#" class="loginLeftinput3">忘记密码？</a></td>
-</tr>
-<tr>
-<td width="77" height="45" align="right" class="malMembepasswordtitel">&nbsp;</td>
-<td colspan="3" class="malMembepasswordcode">
-<input name="" type="button" class="loginLeftbutton"  value="登录"  /> 
-<div class="loginLeftinput4"><a href="#">立即注册</a></div>
-</td>
-</tr>
-</table>
-
+<div class="bnt-login">
+<ul>
+            <li>
+              <span class="bnt-lable">用户名:</span>
+              <span class="bnt-input"><input name="" type="text" class="cover-input loginLeftinput1 " /></span>
+            </li>
+            <li>
+              <span class="bnt-lable">登陆密码:</span>
+              <span class="bnt-input"><input name="" type="text" class="cover-input loginLeftinput1 " /></span>
+            </li>
+            <li>
+              <span class="bnt-lable">验证码:</span>
+              <span class="bnt-input"><input name="" type="text" class="cover-input loginLeftinput1 verify" /></span>
+              <span class="bnt-verify"><img src="images/ver.png" /></span>
+              <span class="bnt-verify-update">换一张</span>
+            </li>
+            <li class="bnt-forget">
+              <span>忘记密码?</span>
+            </li>
+            <li class="login">
+            <span class="login-btn loginLeftinput4">
+                <input name="" type="button" class="loginLeftbutton"  value="登录"  /> 
+              <a href="#">立即注册</a>
+            </span>
+            </li>
+</ul>
+</div>
 </div>
 </div>
 <div class="loginRight">

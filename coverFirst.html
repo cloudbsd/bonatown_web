@@ -4,8 +4,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-<SCRIPT type="text/javascript" src="js/jquery-1.8.3.min.js"></SCRIPT>
+<link rel="stylesheet" href="themes/base/jquery.ui.all.css" />
+<link href="css/bnt.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <SCRIPT type="text/javascript" src="js/site.js"></SCRIPT>
+<script src="ui/jquery.ui.core.js"></script>
+<script src="ui/jquery.ui.widget.js"></script>
+<script src="ui/jquery.ui.datepicker.js"></script>
+<SCRIPT type="text/javascript" src="js/jqueryui.date.cn.js"></SCRIPT>
+<script type="text/javascript" src="js/tmpl.min.js"></script>        
 <title></title>
 </head>
 
@@ -88,108 +95,201 @@
       <div class="coverInfo">
         <h1>车辆信息</h1>
         <div class="coverInfo1">
-          <table width="786" border="0">
-          <tr>
-            <th width="166" height="30" align="right"> 车辆行驶城市: </th>
-            <td width="620"><input name="" type="text" class="coverInfotxt1" />
-                            <input name="" type="button" class="memberCotxt6" />
-                            <img src="images/index-index61.jpg" />
-                            <i><img src="images/cover-08.png" width="11" height="12" />请选择行驶城市</i></td>
-          </tr>
-          <tr>
-          <th width="166" height="30" align="right"> 车牌号码: </th>
-            <td width="620"><input name="" type="text" class="coverInfotxt1" />
-                            <input name="" type="button" class="memberCotxt6" />
-                            <img src="images/index-index61.jpg" /></td>
-          </tr>
-          <tr>
-          <th width="166" height="30" align="right"> 发动机号: </th>
-            <td width="620"><input name="" type="text" class="coverInfotxt1" />
-                            <input name="" type="button" class="memberCotxt6" />
-                            <img src="images/index-index61.jpg" /></td>
-          </tr>
-          <tr>
-          <th width="166" height="30" align="right"> 车架: </th>
-            <td width="620"><input name="" type="text" class="coverInfotxt1" />
-                            <input name="" type="button" class="memberCotxt6" />
-                            <img src="images/index-index61.jpg" /></td>
-          </tr>
-                    <tr>
-            <th width="166" height="30" align="right"> 注册日期: </th>
-            <td width="620"><input name="" type="text" class="memberCotxt5" />
-                            <input name="" type="button" class="memberCotxt6" /><span>年</span>
-                            <input name="" type="text" class="memberCotxt5" />
-                            <input name="" type="button" class="memberCotxt6" /><span>月</span>
-                            <input name="" type="text" class="memberCotxt5" />
-                            <input name="" type="button" class="memberCotxt6" /><span>日</span><img src="images/index-index61.jpg" /></td>
-          </tr>
-          <tr>
-          <th width="166" height="30" align="right"> 车辆座位数: </th>
-            <td width="620"><input name="" type="text" class="coverInfotxt1" />
-                            <input name="" type="button" class="memberCotxt6" />
-                            <img src="images/index-index61.jpg" /></td>
-          </tr>
-          </table>
-        </div><!--coverInfo1-->      
+          <ul>
+            <li>
+              <span class="bnt-lable">车辆行驶城市:</span>
+                <div class="bnt-input">
+               <select class="cover-select cover-width-140">
+                <option>上海</option>
+                <option>黑龙江</option>
+                <option>北京</option>
+                <option>天津</option>
+                <option>黑龙江</option>
+                <option>黑龙江</option>
+              </select>
+            </div>
+              <span class="bnt-require">*</span>
+              <div class="require-show">
+              <span class="bnt-minus"></span>
+              <span class="bnt-alert">请输入车牌号码</span>
+              </div>
+            </li>
+              <li>
+              <span class="bnt-lable">车牌号码:</span>
+              <span><input name="" type="text" class="cover-input cover-width-140" /></span>
+              <span class="bnt-require">*</span>
+              <div class="require-hide">
+              <span class="bnt-minus"></span>
+              <span class="bnt-alert">请输入车牌号码</span>
+              </div>
+              </li>
+              <li>
+              <span class="bnt-lable">发动机号:</span>
+              <span><input name="" type="text" class="cover-input cover-width-140" /></span>
+              <span class="bnt-require">*</span>
+              <div class="require-hide">
+              <span class="bnt-minus"></span>
+              <span class="bnt-alert">请输入车牌号码</span>
+              </div>
+              </li>
+              <li>
+              <span class="bnt-lable">车架:</span>
+              <span><input name="" type="text" class="cover-input cover-width-140" /></span>
+              <span class="bnt-require">*</span>
+              <div class="require-hide">
+              <span class="bnt-minus"></span>
+              <span class="bnt-alert">请输入车牌号码</span>
+              </div>
+              </li>
+              <li>
+              <span class="bnt-lable">注册日期:</span>
+              <span><input name="" type="text" id="datepicker" class="datepicker cover-input cover-width-140" /></span>
+              <span class="bnt-require">*</span>
+              <div class="require-hide">
+              <span class="bnt-minus"></span>
+              <span class="bnt-alert">请选择日期</span>
+              </div>
+              </li>
+              <li>
+              <span class="bnt-lable">车辆座位数:</span>
+              <div class="bnt-input">
+                <select class="cover-select cover-width-140">
+                  <option>座位数</option>
+                  <option>01</option>
+                  <option>02</option>
+                  <option>03</option>
+                </select>
+              </div>
+              <span class="bnt-require">*</span>
+              <div class="require-hide">
+              <span class="bnt-minus"></span>
+              <span class="bnt-alert">请输入车牌号码</span>
+              </div>
+            </li>
+          </ul>
+          </div><!--coverInfo1-->      
       </div><!--coverInfo--> 
-      <div class="coverInfo">
-           <h1>投保信息</h1>
-           <div class="coverInfo1">
-           <table width="786" border="0">
-           <tr>
-            <th width="166" height="30" align="right">保险公司: </th>
-            <td width="620"><input name="" type="text" class="coverInfotxt1" />
-                            <input name="" type="button" class="memberCotxt6" /><img src="images/index-index61.jpg" /></td>
-           </tr>
-           <tr>
-            <th width="166" height="30" align="right">保单生效日期: </th>
-            <td width="620"><input name="" type="text" class="memberCotxt5" />
-                            <input name="" type="button" class="memberCotxt6" /><span>年</span>
-                            <input name="" type="text" class="memberCotxt5" />
-                            <input name="" type="button" class="memberCotxt6" /><span>月</span>
-                            <input name="" type="text" class="memberCotxt5" />
-                            <input name="" type="button" class="memberCotxt6" /><span>日</span><img src="images/index-index61.jpg" /></td>
-           </tr>
-           <tr>
-            <th width="166" height="30" align="right">车辆座位数: </th>
-            <td width="620"><input name="" type="text" class="coverInfotxt1" />
-                            <input name="" type="button" class="memberCotxt6" /><img src="images/index-index61.jpg" /></td>
-           </tr> 
-            <tr>
-            <th width="166" height="30" align="right">投保人: </th>
-            <td width="620"><strong>某某某</strong><a  href="#">删除</a>
-                           <div class="coverInfotxt2"><a href="#"><img src="images/cover-09.png" />添加被投保人</a></div><img src="images/index-index61.jpg" /></td>
-                            
-           </tr>
-           <tr>
-            <th width="166" height="30" align="right">性别: </th>
-            <td width="620"><div class="coverInfotxt4"><input name="RadioGroup1" type="radio"class="coverInfotxt3" value="男" checked="checked" /><span>男</span></div>
-                            <input type="radio" name="RadioGroup1" value="女"class="coverInfotxt3" /><span>女</span></td>
-                            
-           </tr>                   
-           </table>
-           </div>
-         </div>
-         <div class="coverInfo coverInfolast">
-           <h1>寄送地址</h1>
-           <div class="coverInfo1">
-           <table width="786" border="0">
-          <tr>
-            <th width="166" height="30" align="right"> 所在城市: </th>
-            <td width="620"><input name="" type="text" class="memberCotxt5" />
-                            <input name="" type="button" class="memberCotxt6" /><span>省<img src="images/index-index61.jpg" /></span>
-                            <input name="" type="text" class="memberCotxt5" />
-                            <input name="" type="button" class="memberCotxt6" /><span>市<img src="images/index-index61.jpg" /></span>
-                            <input name="" type="text" class="memberCotxt5" />
-                            <input name="" type="button" class="memberCotxt6" /><span>区<img src="images/index-index61.jpg" /></span></td>
-           </tr>
-            <tr>
 
-            <td width="786"  height="30" colspan="2"><input style="margin-left:176px; width:280px;" name="" type="text" class="memberCotxt1" />&nbsp;街道<img src="images/index-index61.jpg" /></td>
-           </tr>
-           </table>
-           </div>
-         </div>    
+      <div class="coverInfo">
+        <h1>投保信息</h1>
+        <div class="coverInfo1">
+          <ul>
+            <li class="form-group">
+              <span class="bnt-lable">保险公司:</span>
+              <div class="bnt-input">
+                <select class="cover-select cover-width-140">
+                  <option>保险公司</option>
+                  <option>平安</option>
+                  <option>人寿</option>
+                  <option>太平洋</option>
+                </select>
+              </div>
+              <span class="bnt-require">*</span>
+              <div class="require-show">
+              <span class="bnt-minus"></span>
+              <span class="bnt-alert">请选择保险公司</span>
+              </div>
+            </li>
+              <li>
+              <span class="bnt-lable">保单生效日期:</span>
+              <span><input name="" type="text" id="" class="datepicker cover-input cover-width-140" /></span>
+
+              <span class="bnt-require">*</span>
+              <div class="require-hide">
+              <span class="bnt-minus"></span>
+              <span class="bnt-alert">请选择日期</span>
+              </div>
+              </li>
+              <li>
+              <span class="bnt-lable">车辆座位数:</span>
+              <div class="bnt-input">
+                <select class="cover-select cover-width-140">
+                  <option>座位数</option>
+                  <option>01</option>
+                  <option>02</option>
+                  <option>03</option>
+                </select>
+              </div>
+
+              <span class="bnt-require">*</span>
+              <div class="require-hide">
+              <span class="bnt-minus"></span>
+              <span class="bnt-alert">请输入车牌号码</span>
+              </div>
+            </li>
+              <li>
+              <span class="bnt bnt-lable">投保人:</span>
+              <span class="bnt bnt-lable-info">某某某</span>
+              <span class="bnt-lable-info"><a href="javascript:void(0)" class="btn-del-person">删除</a></span>
+              <a class="bnt-button-plus bnt-margin-left-200" id="btn-add-person" href="javascript:void(0)"><span class="bnt-plus"></span>添加被投保人</a>
+            </li>
+            <div id="add-person">
+              
+            </div>
+              <li>
+              <span class="bnt-lable">性别:</span>
+              <span class="bnt-lable-info"><input type="radio" checked /> 男</span>
+              <span class="bnt-lable-info"><input type="radio" /> 女</span>
+            </li>
+              <li>
+              <span class="bnt-lable">表单类型:</span>
+              <span class="bnt-lable-info"><input type="checkbox" checked />电子表单</span>
+              <span class="bnt-lable-info"><input type="checkbox" />电子表单2</span>
+            </li>
+
+          </ul>
+          </div><!--coverInfo1-->      
+      </div><!--coverInfo--> 
+
+      <div class="coverInfo">
+        <h1>寄送地址</h1>
+        <div class="coverInfo1">
+          <ul>
+              <li>
+              <span class="bnt-lable">所在城市:</span>
+              <div class="bnt-input">
+                <select class="cover-select cover-width-85">
+                  <option>省份</option>
+                  <option>2000</option>
+                  <option>2001</option>
+                  <option>2002</option>
+                </select>
+              </div>
+              <div class="bnt-input">
+                <select class="cover-select cover-width-85">
+                  <option>城市</option>
+                  <option>01</option>
+                  <option>02</option>
+                  <option>03</option>
+                </select>
+              </div>
+              <div class="bnt-input">
+                <select class="cover-select cover-width-85">
+                  <option>区县</option>
+                  <option>01</option>
+                  <option>02</option>
+                  <option>03</option>
+                </select>
+              </div>
+              <span class="bnt-require">*</span>
+              <div class="require-hide">
+              <span class="bnt-minus"></span>
+              <span class="bnt-alert">请选择城市</span>
+              </div>
+              </li>
+              <li>
+              <span class="bnt-lable">街道:</span>
+              <span class="bnt-input"><input name="" type="text" class="cover-input cover-width-280" /></span>
+              <span class="bnt-require">*</span>
+              <div class="require-hide">
+              <span class="bnt-minus"></span>
+              <span class="bnt-alert">请选择城市</span>
+              </div>
+              </li>
+          </ul>
+          </div><!--coverInfo1-->      
+      </div><!--coverInfo--> 
+
          <div class="clear"></div>
     <div class="memberInfoBtn"><a href="#">提交</a></div>
     </div>
@@ -219,5 +319,11 @@
   <div class="indexBottom3"> 版权所有<font class="fonta">©</font> 中国太平洋保险（集团）股份有限公司 </div>
 </div>
 </body>
-
+<script type="text/x-tmpl" id="tmpl-person-body">
+<li>
+    <span class="bnt-lable">投保人:</span>
+    <span class="bnt-lable-info">某某某</span>
+    <span class="bnt-lable-info"><a href="javascript:void(0)" class="del-person">删除</a></span>
+</li>
+</script>
 </html>

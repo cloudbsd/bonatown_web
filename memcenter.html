@@ -75,60 +75,105 @@
                 <li><a href="#">我的购物车</a></li>   
             </ul>
         </div>
-        <script language="javascript">
-            function logo_div(obj)
-            {
-                for(i=1; i<=5; i++)
-                {
-                    document.getElementById("zgjj0"+i).className="";
-                    document.getElementById("zgjj0"+obj).className="zgjj_red";
-                    document.getElementById("logo0"+i).style.display="none";
-                    document.getElementById("logo0"+obj).style.display="";
-                    }
-                }
-        </script>
+
         <div class="mainright">
             <div class="topNewsBox-info">
                 <div class="user-info">
-                  <li class="user-info-title"><div></div>用户信息</li>
-                	<dl>
-                        <dd>账户名:某某某</dd>
-                        <dd class="user-safe">
-                        <div class="safe-title">
-                        账号安全:
-                        </div>
-                        <div class="safe">
-                          <span class="level"><button class="low"></button>低</span>
-                          <span class="level"><button></button>中</span>
-                          <span class="level"><button></button>高</span>
-                          <!--中(middle),高(height)，都在css里-->
-                        </div>
-                        </dd>
-                        <dd>上次登录时间: 2013.01.01</dd>
-                        <dd>隶属园区: <a href="#">某某区</a></dd>
-                        <dd>已支付总额: 200元</dd>
-                        <dd>已查询报价次数: 2次<span>用户性质: 企业用户/园区用户</span></dd>
-                    </dl>
-                </div>
-                <div class="voucher">
-                <li class="voucher-title">代金券领取:</li>
-                <li class="voucher-img"><img src="images/voucher.png" /></li>
-                <li class="voucher-get"><a href="#">如何获取?</a></li>
-                </div>
+                  <div  class="user-info-title1">用户信息</div>
+           
+                     <div class="user-infotop">
+ 
+					   <table width="399" border="0">
+                                            <tr>
+                                            <td width="115" height="40" align="right"><img src="images/memcenter-04.jpg" class="user-infotopimg1"> 账户名:</td>
+                                            <td width="274">某某某</td>
+                         </tr>
+                                            <tr>
+                                            <td height="40" align="right">
+                                                            
+                                                            
+                                                            账号安全:
+                                                            
+                                                            
+                                            </td>
+                                            <td height="40"><div class="safe">
+                                                            <span class="level"><button class="low"></button>低</span>
+                                                            <span class="level"><button></button>中</span>
+                                                            <span class="level"><button></button>高</span>
+                                                            </div></td>
+                                            </tr>
+                                            <tr>
+                                            <td height="40" align="right">上次登录时间: </td>
+                                            <td height="40">2013.01.01</td>
+                                            </tr>
+                                            </table>
+                  </div>
+                     
+                     
+                     <div class="user-infobottom">
+                     <table width="399" height="113" border="0">
+  <tr>
+    <td height="31" align="right">已付付总额：</td>
+    <td><span  class="user-infobottom2">200</span>元</td>
+    <td colspan="2">&nbsp;</td>
+    </tr>
+  <tr>
+    <td width="116" height="37" align="right">隶属园区：</td>
+    <td width="62"><span class="user-infobottom1">某某区</span></td>
+    <td width="62" align="right">用户性质: </td>
+    <td width="141">企业用户/园区用户</td>
+  </tr>
+  <tr>
+    <td height="37" align="right">已查询报价次数: </td>
+    <td>2次</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    </tr>
+</table>
+                     </div>
+
+                    
+              </div>
+                		<div class="voucher">
+                        
+                				<div class="voucher-title">代金券领取:</div>
+		    <div class="voucher-get"><a href="#">如何获取?</a></div>
+              				 	 <div class="voucher-img">
+                                 		<div class="voucher-imgbox"></div>
+                                                    <table width="360" border="0">
+                                                    <tr>
+                                                    <td width="5"></td>
+                                                    <td width="249" height="78"  ><span class="voucher-imgbox2"> 200元</span><span class="voucher-imgbox1">代金券</span></td>
+                                                    <td width="23"></td>
+                                                    <td width="65"><a href="#" class="voucher-imgbox3">立即获取</a></td>
+                                                    </tr>
+                                                    </table>
+                                 </div>
+                                 
+                                            <table width="361" height="58" border="0">
+                                            <tr>
+                                            <td width="243" align="right"><input name="" type="button" class="voucherbutton" value="查看详情>>"/>&nbsp;</td>
+                                            <td width="108">您可以<a href="#" class="voucherbutton-a">逛逛保险超市</a></td>
+                                            </tr>
+                                            </table>
+
+              </div>
                 <div class="clear"></div>
             </div>
-            <div class="bdTabBox">
+            <!--<div class="bdTabBox">
               <ul class="bdTabBox_Tit_memer clearfix">
-                    <li class="hover" id="one1"></li>
-                    <li id="one2"></li>
+                    <li class="hover" id="one1">待提交定单（3）</li>
+                    <li id="one2" onMouseOver="zahe_1('one',2,4)"><a href="javascript:;">待支付订单（2）</a></li>
+                    <li id="one3" onMouseOver="zahe_1('one',3,4)"><a href="javascript:;">新保单（1）</a></li
                 </ul>	
                 <div id="con_one_1" class="bdTabBox_Con_mem">	
                   <div class="order-list">
-                  <dl>
-                    <dd><span><a href="#">订单编号:1423423</a></span><a href="#">立即提交</a></dd>
-                    <dd><span><a href="#">订单编号:1423423</a></span><a href="#">立即提交</a></dd>
-                    <dd><span><a href="#">订单编号:1423423</a></span><a href="#">立即提交</a></dd>
-                  </dl>
+                              <ul>
+                                <li><span><a href="#">订单编号:1423423</a></span><a href="#"  class="order-listbutton">立即提交</a></li>
+                                <li><span><a href="#">订单编号:1423423</a></span><a href="#" class="order-listbutton">立即提交</a></li>
+                                <li><span><a href="#">订单编号:1423423</a></span><a href="#" class="order-listbutton">立即提交</a></li>
+                              </ul>
+                  
                   </div>
                     
                     <div class="pagesWrap clearfix">
@@ -140,7 +185,65 @@
                         <span>共3页</span>
                     </div>
                 </div>
+              </div>-->
+              <div class="bdTabBox">
+              <ul class="bdTabBox_Tit1 clearfix">
+                    <li class="hover" id="one1" onMouseOver="zahe_1('one',1,4)"><a href="javascript:;">待提交定单（3）</a></li>
+                    <li id="one2" onMouseOver="zahe_1('one',2,4)"><a href="javascript:;">待支付订单（2）</a></li>
+                    <li id="one3" onMouseOver="zahe_1('one',3,4)"><a href="javascript:;">新保单（1）</a></li>
+                    
+                </ul>	
+                <div id="con_one_1" class="bdTabBox_Con1 ">	
+                	
+                        <div class="order-list">
+                              <ul>
+                                <li><span><a href="#">订单编号:1423423</a></span><a href="#"  class="order-listbutton">立即提交</a></li>
+                                <li><span><a href="#">订单编号:1423423</a></span><a href="#" class="order-listbutton">立即提交</a></li>
+                                <li><span><a href="#">订单编号:1423423</a></span><a href="#" class="order-listbutton">立即提交</a></li>
+                              </ul>
+                  
+                  </div>
+
+                    
+                    <div class="pagesWrap clearfix">
+                    	<a href="#" class="prev">上一页</a>
+                        <a href="#" class="current">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#" class="next">下一页</a>
+                        <span>共3页</span>
+                    </div>
               </div>
+<!--              <div id="con_one_2" class="bdTabBox_Con hidden">	
+                   
+                    2
+
+                    
+                    <div class="pagesWrap clearfix">
+                    	<a href="#" class="prev">上一页</a>
+                        <a href="#" class="current">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#" class="next">下一页</a>
+                        <span>共3页</span>
+                    </div>
+              </div>
+              <div id="con_one_3" class="bdTabBox_Con hidden">	
+                   
+                    3
+
+                    
+                    <div class="pagesWrap clearfix">
+                    	<a href="#" class="prev">上一页</a>
+                        <a href="#" class="current">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#" class="next">下一页</a>
+                        <span>共3页</span>
+                    </div>
+              </div>
+-->              
+            </div>
     
         </div>
 	</div>

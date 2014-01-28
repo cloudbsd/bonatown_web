@@ -1,11 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-<SCRIPT type="text/javascript" src="js/jquery-1.8.3.min.js"></SCRIPT>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/jcarousellite.js"></script>
+
 <SCRIPT type="text/javascript" src="js/site.js"></SCRIPT>
+<SCRIPT type="text/javascript" src="js/jquery.customSelect.js"></SCRIPT>
 <title></title>
 </head>
 
@@ -55,6 +58,56 @@
   <div class="order_site">您的位置：<span>保纳通 <img src="images/insurance-01.png"/> 责任险 <img src="images/insurance-01.png"/> </span>雇主责任险</div>
   <!--content-->
 <div class="indexnr">
+  <!--保险超市菜单开始-->
+<div class="navlist sub-page-menu">
+  <ul>
+  <div class="navlistTil"><a href="#"><img src="images/index-index11.png" />财产险</a></div>
+  <li>
+  <div class="navlistNr">
+  <span><a href="#">商业楼宇财产险</a></span>
+  <span><a href="#">工程保险</a></span>
+  </div>
+  </li>
+  </ul> 
+
+  <ul> 
+  <div class="navlistTil"><a href="#" class="hover"><img src="images/index-index12.png" />责任险</a></div>
+    <li class="hover">
+      <div class="navlistNr">
+      <span><a href="#" >雇主责任险</a></span>
+      <span><a href="#">产品责任险</a></span>
+      <span><a href="#">公众责任险</a></span>
+      <span><a href="#">火灾险</a></span>
+      </div>
+    </li>
+  </ul>                                       
+
+  <ul>
+    <div class="navlistTil"><a href="#"><img src="images/index-index13.png" />医疗健康</a></div>                   
+    <li>
+      <div class="navlistNr">
+        <span><a href="#">团体意外伤害险</a></span>
+      </div>
+    </li>
+  </ul>                                      
+
+<ul>    
+<div class="navlistTil"><a href="#"><img src="images/index-index14.png" />养老年金</a></div>
+</ul>
+<ul>  
+<div class="navlistTil"><a href="#"><img src="images/index-index15.png" /> 企业车险 </a></div>
+</ul>
+<ul> 
+<div class="navlistTil"><a href="#"><img src="images/index-index16.png" />货运险</a></div>
+</ul>
+
+<div class="navlistBot">
+</div>
+</div>
+<!--保险超市结束-->
+
+<SCRIPT type="text/javascript" src="js/jcarousellite_1.0.1.js"></SCRIPT>
+
   <div class="insuranceDetailsnr">
     <div class="insuranceDetailsbox">
       <div class="insuranceDetails1">
@@ -85,35 +138,37 @@
       </div>
     </div>
     
+
     <div class="insuranceStepbox">
-    <table width="100%" border="0">
-  <tr>
-    <td width="130"><img src="images/insurance-04.png" width="59" height="60" /></td>
-    <td width="50"><img src="images/insurance-08.png" width="50" height="9" /></td>
-    <td width="130"><img src="images/insurance-05.png" width="53" height="60" /></td>
-    <td width="50"><img src="images/insurance-08.png" width="50" height="9" /></td>
-    <td width="130"><img src="images/insurance-06.png" width="66" height="66" /></td>
-    <td width="50"><img src="images/insurance-08.png" width="50" height="9" /></td>
-    <td width="130"><img src="images/insurance-07.png" width="69" height="64" /></td>
-  </tr>
-  <tr>
-    <td height="35">填写投保资料</td>
-    <td></td>
-    <td>等待报价</td>
-    <td></td>
-    <td>确认并支付</td>
-    <td></td>
-    <td>投保成功</td>
-  </tr>
-    </table>
+      <h1>投保流程</h1>
+      <ul class="tb-flow">
+        <li class="tb-flow-text"><img src="images/insurance-04.png" width="59" height="60" /><span>填写投保资料</span></li>
+        <li class="tb-flow-sep"><img src="images/insurance-08.png" width="50" height="9" /></li>
+        <li class="tb-flow-text"><img src="images/insurance-05.png" width="59" height="60" /><span>填写投保资料</span></li>
+        <li class="tb-flow-sep"><img src="images/insurance-08.png" width="50" height="9" /></li>
+        <li class="tb-flow-text"><img src="images/insurance-06.png" width="59" height="60" /><span>填写投保资料</span></li>
+        <li class="tb-flow-sep"><img src="images/insurance-08.png" width="50" height="9" /></li>
+        <li class="tb-flow-text"><img src="images/insurance-07.png" width="59" height="60" /><span>填写投保资料</span></li>
+      </ul>
     </div>
     <div class="clear"></div>
     <div class="insuranceCobrandingbox">
       <div class="insuranceCobranding">
         <h1>合作品牌</h1>
-        <ul>
+        <div class="piclist">
+          <ul>
+          <li>
+            <img src="images/insurance-05.jpg" width="93" height="31" />
+            <p>快速出保单<br />24小时在线<br />服务价格超低</p>
+            <input name="" type="button" class="indexDiscountLetnrh3" value="我要投保"   />
+          </li>
           <li>
             <img src="images/insurance-09.png" width="108" height="31" />
+            <p>快速出保单<br />24小时在线<br />服务价格超低</p>
+            <input name="" type="button" class="indexDiscountLetnrh3" value="我要投保"   />
+          </li>
+          <li>
+            <img src="images/insurance-05.jpg" width="93" height="31" />
             <p>快速出保单<br />24小时在线<br />服务价格超低</p>
             <input name="" type="button" class="indexDiscountLetnrh3" value="我要投保"   />
           </li>
@@ -127,22 +182,25 @@
             <p>快速出保单<br />24小时在线<br />服务价格超低</p>
             <input name="" type="button" class="indexDiscountLetnrh3" value="我要投保"   />
           </li>
-          <li class="rb">
-            <img src="images/insurance-06.jpg" width="105" height="31" />
+          <li>
+            <img src="images/insurance-05.jpg" width="93" height="31" />
             <p>快速出保单<br />24小时在线<br />服务价格超低</p>
             <input name="" type="button" class="indexDiscountLetnrh3" value="我要投保"   />
           </li>
+          
         </ul>
-        <div class="insuranceCobrandingTl"><a href="#"></a></div>
-        <div class="insuranceCobrandingTr"><a class="hover" href="#"></a></div>
+        
+        <div class="insuranceCobrandingTl"><a href="javascript:void(0)"></a></div>
+        <div class="insuranceCobrandingTr"><a class="hover" href="javascript:void(0)"></a></div>
+      </div>
       </div>
     </div> 
     <div class="clear"></div> 
     <div class="insuranceTabbox">
       <div class="insuranceTab">
-        <a id="click1" onMouseOver="setTab('click',1,3);" href="#">险种详情</a>
-        <a id="click2" onMouseOver="setTab('click',2,3);" href="#">案例分享</a>
-        <a id="click3" onMouseOver="setTab('click',3,3);" class="hover" href="#">用户评价<span>(5)</span></a>
+        <a data-id="1" href="javascript:void(0)">险种详情</a>
+        <a data-id="2" href="javascript:void(0)">案例分享</a>
+        <a data-id="3" class="hover" href="javascript:void(0)">用户评价<span>(5)</span></a>
       </div>
       <div class="insuranceType" id="con_click_1" style="display:none;">
         <div class="insurancePlanbox">
@@ -403,3 +461,4 @@
 </body>
 
 </html>
+        
