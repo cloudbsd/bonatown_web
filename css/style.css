@@ -978,3 +978,11 @@ white-space: nowrap;
 .fn-clear {
 zoom: 1;
 }
+
+label.error{
+  background: url(../images/cover-08.png) no-repeat;
+margin-left: 15px;
+padding-left:15px;
+color: red;
+line-height: 30px;
+}

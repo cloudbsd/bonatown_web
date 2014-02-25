@@ -168,6 +168,6 @@ border-color: #398439;
   background: url(../images/cover-08.png) no-repeat;
 }
 
-.ui-datepicker-trigger{margin-left:-38px; margin-top:6px; vertical-align:middle;}
+.ui-datepicker-trigger{margin-left:-22px; position:absolute; margin-top:6px; vertical-align:middle;}
 .linkman-date .ui-datepicker-trigger{margin-left:-22px; margin-top:0px; vertical-align:initial;}
 

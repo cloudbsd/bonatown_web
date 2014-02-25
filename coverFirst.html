@@ -13,6 +13,7 @@
 <script src="ui/jquery.ui.datepicker.js"></script>
 <SCRIPT type="text/javascript" src="js/jqueryui.date.cn.js"></SCRIPT>
 <script type="text/javascript" src="js/tmpl.min.js"></script>        
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>        
 <title></title>
 </head>
 
@@ -92,6 +93,7 @@
       <div class="coverInfoBlet"><img src="images/cover-03.jpg" width="4" height="3" /></div>
       <div class="coverInfoBrit"><img src="images/cover-04.jpg" width="4" height="3" /></div>
       <div class="memberInfoRemark">我们会严格保密<img src="images/index-index61.jpg"/>为必填 </div>
+        <form id="cover-form" method="post" action="">
       <div class="coverInfo">
         <h1>车辆信息</h1>
         <div class="coverInfo1">
@@ -109,51 +111,31 @@
               </select>
             </div>
               <span class="bnt-require">*</span>
-              <div class="require-show">
-              <span class="bnt-minus"></span>
-              <span class="bnt-alert">请输入车牌号码</span>
-              </div>
             </li>
               <li>
               <span class="bnt-lable">车牌号码:</span>
-              <span><input name="" type="text" class="cover-input cover-width-140" /></span>
+              <span><input name="car_num" id="car_num" type="text" class="cover-input cover-width-140" /></span>
               <span class="bnt-require">*</span>
-              <div class="require-hide">
-              <span class="bnt-minus"></span>
-              <span class="bnt-alert">请输入车牌号码</span>
-              </div>
               </li>
               <li>
               <span class="bnt-lable">发动机号:</span>
-              <span><input name="" type="text" class="cover-input cover-width-140" /></span>
+              <span><input name="engine_num" id="engine_num" type="text" class="cover-input cover-width-140" /></span>
               <span class="bnt-require">*</span>
-              <div class="require-hide">
-              <span class="bnt-minus"></span>
-              <span class="bnt-alert">请输入车牌号码</span>
-              </div>
               </li>
               <li>
               <span class="bnt-lable">车架:</span>
-              <span><input name="" type="text" class="cover-input cover-width-140" /></span>
+              <span><input name="car_frame" id="car_frame" type="text" class="cover-input cover-width-140" /></span>
               <span class="bnt-require">*</span>
-              <div class="require-hide">
-              <span class="bnt-minus"></span>
-              <span class="bnt-alert">请输入车牌号码</span>
-              </div>
               </li>
               <li>
               <span class="bnt-lable">注册日期:</span>
-              <span><input name="" type="text" id="datepicker" class="datepicker cover-input cover-width-140" /></span>
+              <span><input name="reg_date" id="reg_date" type="text" id="datepicker" class="datepicker cover-input cover-width-140" /></span>
               <span class="bnt-require">*</span>
-              <div class="require-hide">
-              <span class="bnt-minus"></span>
-              <span class="bnt-alert">请选择日期</span>
-              </div>
               </li>
               <li>
               <span class="bnt-lable">车辆座位数:</span>
               <div class="bnt-input">
-                <select class="cover-select cover-width-140">
+                <select class="cover-select cover-width-140" id="car_seat">
                   <option>座位数</option>
                   <option>01</option>
                   <option>02</option>
@@ -161,10 +143,6 @@
                 </select>
               </div>
               <span class="bnt-require">*</span>
-              <div class="require-hide">
-              <span class="bnt-minus"></span>
-              <span class="bnt-alert">请输入车牌号码</span>
-              </div>
             </li>
           </ul>
           </div><!--coverInfo1-->      
@@ -185,20 +163,12 @@
                 </select>
               </div>
               <span class="bnt-require">*</span>
-              <div class="require-show">
-              <span class="bnt-minus"></span>
-              <span class="bnt-alert">请选择保险公司</span>
-              </div>
             </li>
               <li>
               <span class="bnt-lable">保单生效日期:</span>
               <span><input name="" type="text" id="" class="datepicker cover-input cover-width-140" /></span>
 
               <span class="bnt-require">*</span>
-              <div class="require-hide">
-              <span class="bnt-minus"></span>
-              <span class="bnt-alert">请选择日期</span>
-              </div>
               </li>
               <li>
               <span class="bnt-lable">车辆座位数:</span>
@@ -212,10 +182,6 @@
               </div>
 
               <span class="bnt-require">*</span>
-              <div class="require-hide">
-              <span class="bnt-minus"></span>
-              <span class="bnt-alert">请输入车牌号码</span>
-              </div>
             </li>
               <li>
               <span class="bnt bnt-lable">投保人:</span>
@@ -228,8 +194,8 @@
             </div>
               <li>
               <span class="bnt-lable">性别:</span>
-              <span class="bnt-lable-info"><input type="radio" checked /> 男</span>
-              <span class="bnt-lable-info"><input type="radio" /> 女</span>
+              <span class="bnt-lable-info"><input type="radio"  name="gender" /> 男</span>
+              <span class="bnt-lable-info"><input type="radio"  name="gender" /> 女</span>
             </li>
               <li>
               <span class="bnt-lable">表单类型:</span>
@@ -272,26 +238,19 @@
                 </select>
               </div>
               <span class="bnt-require">*</span>
-              <div class="require-hide">
-              <span class="bnt-minus"></span>
-              <span class="bnt-alert">请选择城市</span>
-              </div>
               </li>
               <li>
               <span class="bnt-lable">街道:</span>
               <span class="bnt-input"><input name="" type="text" class="cover-input cover-width-280" /></span>
               <span class="bnt-require">*</span>
-              <div class="require-hide">
-              <span class="bnt-minus"></span>
-              <span class="bnt-alert">请选择城市</span>
-              </div>
               </li>
           </ul>
           </div><!--coverInfo1-->      
       </div><!--coverInfo--> 
 
          <div class="clear"></div>
-    <div class="memberInfoBtn"><a href="#">提交</a></div>
+         <div class="memberInfoBtn"><a href="javascript:void(0)" id="cover-submit">提交</a></div>
+      </form>
     </div>
 
   </div><!--coverbox-->
@@ -325,5 +284,90 @@
     <span class="bnt-lable-info">某某某</span>
     <span class="bnt-lable-info"><a href="javascript:void(0)" class="del-person">删除</a></span>
 </li>
+</script>
+<script>
+
+$().ready(function() {
+//  $("#cover-submit").click(function(){
+//      $("#cover-form").submit();
+//  });
+
+    // validate signup form on keyup and submit
+    $("#cover-form").validate({
+        submitHandler: function(form) { 
+            alert("submitted!"); 
+            form.submit();
+        },
+        onfocusout:function(element) { $(element).valid(); },
+        errorPlacement: function(error, element) {
+            if ( element.is(":radio") )
+                error.appendTo( element.parent().next() );
+            else if ( element.is(":checkbox") )
+                error.appendTo ( element.next() );
+            else
+                error.appendTo( element.parent().next() );
+        },
+		rules: {
+			car_num: "required",
+			gender: "required",
+			reg_date: {
+				required: true,
+				date: true 
+			},
+			engine_num: {
+				required: true,
+				minlength: 2
+			},
+			password: {
+				required: true,
+				minlength: 5
+			},
+			confirm_password: {
+				required: true,
+				minlength: 5,
+				equalTo: "#password"
+			},
+			email: {
+				required: true,
+				email: true
+			},
+			topic: {
+				required: "#newsletter:checked",
+				minlength: 2
+			},
+			agree: "required"
+		},
+		messages: {
+			car_num: "Please enter your firstname",
+			lastname: "Please enter your lastname",
+			username: {
+				required: "Please enter a date",
+				minlength: "Date format is error"
+			},
+			password: {
+				required: "Please provide a password",
+				minlength: "Your password must be at least 5 characters long"
+			},
+			confirm_password: {
+				required: "Please provide a password",
+				minlength: "Your password must be at least 5 characters long",
+				equalTo: "Please enter the same password as above"
+			},
+			email: "Please enter a valid email address",
+			agree: "Please accept our policy"
+		}
+	});
+
+	// propose username by combining first- and lastname
+	$("#username").focus(function() {
+		var firstname = $("#firstname").val();
+		var lastname = $("#lastname").val();
+		if(firstname && lastname && !this.value) {
+			this.value = firstname + "." + lastname;
+		}
+	});
+
+
+});
 </script>
 </html>
